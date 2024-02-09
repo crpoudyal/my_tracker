@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_tracker/dependencies.dart';
 
 void main() {
+  initDependencies();
   runApp(const MainApp());
 }
 
