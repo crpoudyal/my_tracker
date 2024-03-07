@@ -19,6 +19,9 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Create Account"),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: <Widget>[

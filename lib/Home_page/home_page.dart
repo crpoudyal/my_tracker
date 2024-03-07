@@ -12,25 +12,36 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Center(
           child: Column(
-        children: [
-          const Text('Welcome to MyTracker'),
-          const SizedBox(
-            height: 20,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'MyTracker',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Login'),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  context.goNamed(SignupScreen.name);
+                },
+                child: const Text('Create account'),
+              ),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Login'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              context.goNamed(SignupScreen.name);
-            },
-            child: const Text('Create account'),
-          ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }

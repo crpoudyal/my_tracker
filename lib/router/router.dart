@@ -23,7 +23,6 @@ final routerProvider = Provider<GoRouter>((ref) {
             debugPrint('$name - $email - $password');
             final appwrite = GetIt.instance.get<Appwrite>();
             final user = await appwrite.createAccount(name, email, password);
-            debugPrint(jsonEncode(user ?? '{}'));
           });
         })
   ]);

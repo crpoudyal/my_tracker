@@ -21,7 +21,6 @@ class SignupForm extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text('Create account'),
           TextFormField(
             controller: nameController,
             decoration: const InputDecoration(
