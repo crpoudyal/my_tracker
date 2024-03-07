@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_tracker/features/login_screen/src/login_screen.dart';
 import 'package:my_tracker/features/signup_screen/src/signup_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +27,9 @@ class HomePage extends StatelessWidget {
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.goNamed(LoginScreen.name);
+                },
                 child: const Text('Login'),
               ),
               const SizedBox(
